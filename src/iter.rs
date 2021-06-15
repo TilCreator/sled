@@ -34,6 +34,7 @@ macro_rules! iter_try {
 }
 
 /// An iterator over keys and values in a `Tree`.
+#[derive(Clone)]
 pub struct Iter {
     pub(super) tree: Tree,
     pub(super) hi: Bound<IVec>,
